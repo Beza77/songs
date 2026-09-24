@@ -1,0 +1,2289 @@
+<!doctype html>
+<html lang="am" translate="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="google" content="notranslate" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://img.youtube.com https://i.ytimg.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet" />
+  <title>Amharic Songs Master List</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --page: #f3f5f1;
+      --surface: #ffffff;
+      --surface-raised: #fbfcfa;
+      --ink: #142a22;
+      --ink-soft: #56645e;
+      --line: #d9ded9;
+      --accent: #bb7d1c;
+      --green: #1c5b45;
+      --green-faint: #e6f0eb;
+      --focus: #c48420;
+      --shadow: 0 20px 50px rgba(28, 45, 36, .09);
+      --font-am: "Noto Sans Ethiopic", "Noto Sans", sans-serif;
+      --font-en: "Newsreader", Georgia, serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page: #0d1512;
+        --surface: #141f1b;
+        --surface-raised: #18251f;
+        --ink: #ecf4ef;
+        --ink-soft: #aab9b1;
+        --line: #2d3b35;
+        --accent: #e0aa50;
+        --green: #78b69a;
+        --green-faint: #1b3328;
+        --focus: #e8b359;
+        --shadow: 0 22px 52px rgba(0, 0, 0, .28);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: var(--font-am);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    button, input, a { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button:focus-visible, input:focus-visible, a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+    .shell {
+      width: min(1480px, 100%);
+      margin: 0 auto;
+      padding: clamp(22px, 3.2vw, 52px);
+    }
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: end;
+      padding: 8px 0 28px;
+      border-bottom: 1px solid var(--line);
+    }
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(31px, 4.6vw, 62px);
+      line-height: 1.13;
+      letter-spacing: -.025em;
+      color: var(--ink);
+    }
+    .intro p {
+      max-width: 700px;
+      margin: 14px 0 0;
+      color: var(--ink-soft);
+      font-size: clamp(15px, 1.5vw, 18px);
+    }
+    .count-block {
+      min-width: 170px;
+      padding: 8px 0 4px 28px;
+      border-left: 1px solid var(--line);
+      text-align: right;
+    }
+    .count-block strong {
+      display: block;
+      color: var(--green);
+      font-family: var(--font-en);
+      font-size: 54px;
+      line-height: .9;
+      font-weight: 600;
+    }
+    .count-block span { color: var(--ink-soft); font-size: 13px; }
+    .album-index {
+      padding: 30px 0 2px;
+      border-bottom: 1px solid var(--line);
+    }
+    .album-index-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 18px;
+    }
+    .album-index-head p {
+      max-width: 680px;
+      margin: 7px 0 0;
+      color: var(--ink-soft);
+      font-size: 14px;
+    }
+    .album-count {
+      flex: 0 0 auto;
+      color: var(--green);
+      font-family: var(--font-en);
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .artist-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 28px;
+    }
+    .artist-entry {
+      min-width: 0;
+      padding: 19px 0;
+      border-top: 1px solid var(--line);
+    }
+    .artist-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+    .artist-name { min-width: 0; }
+    .artist-name h3 { margin: 0; font-size: 18px; line-height: 1.35; }
+    .artist-name span {
+      display: block;
+      margin-top: 1px;
+      color: var(--green);
+      font-family: var(--font-en);
+      font-size: 14px;
+    }
+    .artist-source {
+      flex: 0 0 auto;
+      color: var(--ink-soft);
+      font-size: 11px;
+      font-weight: 600;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .album-list { margin: 0; padding: 0; list-style: none; }
+    .album-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      padding: 8px 0;
+      border-top: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+    }
+    .album-row:first-child { border-top: 0; }
+    .album-title { min-width: 0; }
+    .album-title strong { display: block; font-size: 14px; line-height: 1.4; }
+    .album-title span { display: block; color: var(--ink-soft); font-family: var(--font-en); font-size: 13px; }
+    .album-meta { color: var(--ink-soft); font-size: 12px; text-align: right; white-space: nowrap; }
+    .album-details { min-width: 0; }
+    .album-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto auto 18px;
+      gap: 12px;
+      align-items: center;
+      min-width: 0;
+      cursor: pointer;
+      list-style: none;
+    }
+    .album-summary::-webkit-details-marker { display: none; }
+    .album-summary::after {
+      content: "⌄";
+      color: var(--accent);
+      font-family: var(--font-en);
+      font-size: 18px;
+      line-height: 1;
+      transform: rotate(-90deg);
+    }
+    .album-details[open] .album-summary::after { transform: rotate(0); }
+    .album-track-count {
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .track-list {
+      margin: 11px 0 1px;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+    .track-row {
+      display: grid;
+      grid-template-columns: 28px minmax(0, 1fr) 44px 92px;
+      gap: 10px;
+      align-items: baseline;
+      min-width: 0;
+      padding: 8px 0;
+      border-bottom: 1px solid color-mix(in srgb, var(--line) 62%, transparent);
+    }
+    .track-row:last-child { border-bottom: 0; }
+    .track-num, .track-duration {
+      color: var(--ink-soft);
+      font-family: var(--font-en);
+      font-size: 11px;
+      font-variant-numeric: tabular-nums;
+    }
+    .track-num { color: var(--accent); font-weight: 600; }
+    .track-duration { text-align: right; }
+    .track-name { min-width: 0; }
+    .track-name strong { display: block; font-size: 13px; line-height: 1.4; }
+    .track-name span { display: block; color: var(--ink-soft); font-family: var(--font-en); font-size: 12px; }
+    .track-status {
+      justify-self: end;
+      font-size: 10px;
+      font-weight: 700;
+      text-align: right;
+      white-space: nowrap;
+    }
+    .track-status.has-lyrics { color: var(--green); }
+    .track-video-line { display: block; margin-top: 3px; line-height: 1.35; white-space: normal; }
+    .track-video {
+      color: var(--green);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+    .track-video-note { color: var(--ink-soft); font-size: 9px; font-weight: 500; }
+    .track-status.no-lyrics, .track-status.unknown { color: var(--ink-soft); }
+    .catalog-note { margin: 16px 0 22px; color: var(--ink-soft); font-size: 12px; }
+    .review-section {
+      margin-top: 8px;
+      padding: 24px 0 28px;
+      border-top: 1px solid var(--line);
+    }
+    .review-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+    .review-head p {
+      max-width: 720px;
+      margin: 7px 0 0;
+      color: var(--ink-soft);
+      font-size: 14px;
+    }
+    .review-source {
+      flex: 0 0 auto;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      white-space: nowrap;
+    }
+    .review-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 28px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: review-artist;
+    }
+    .review-list li {
+      counter-increment: review-artist;
+      display: grid;
+      grid-template-columns: 30px minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: baseline;
+      min-width: 0;
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+    }
+    .review-list li::before {
+      content: counter(review-artist, decimal-leading-zero);
+      color: var(--accent);
+      font-family: var(--font-en);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .review-name { min-width: 0; }
+    .review-name strong { display: block; font-size: 15px; line-height: 1.45; }
+    .review-name span { display: block; color: var(--ink-soft); font-family: var(--font-en); font-size: 13px; }
+    .review-note {
+      color: var(--green);
+      font-size: 10px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(480px, .92fr) minmax(480px, 1.08fr);
+      gap: clamp(26px, 3vw, 46px);
+      padding-top: 30px;
+      align-items: start;
+    }
+    .list-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+    h2 { margin: 0; font-size: 23px; line-height: 1.2; }
+    .result-count { color: var(--ink-soft); font-size: 13px; white-space: nowrap; }
+    .search-tools { margin-bottom: 20px; }
+    .sort-tools {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .sort-label { color: var(--ink-soft); font-size: 13px; font-weight: 600; }
+    .sort-mode {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 5px;
+      width: min(390px, 100%);
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: var(--surface-raised);
+    }
+    .sort-mode button {
+      min-height: 38px;
+      padding: 7px 12px;
+      border: 0;
+      border-radius: 6px;
+      color: var(--ink-soft);
+      background: transparent;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .sort-mode button.active { color: #fff; background: var(--green); }
+    @media (prefers-color-scheme: dark) { .sort-mode button.active { color: #0b1813; } }
+    .search-mode {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+      width: min(600px, 100%);
+      margin-bottom: 10px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: var(--surface-raised);
+    }
+    .search-mode button {
+      min-height: 40px;
+      padding: 8px 14px;
+      border: 0;
+      border-radius: 6px;
+      color: var(--ink-soft);
+      background: transparent;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .search-mode button.active {
+      color: #fff;
+      background: var(--green);
+    }
+    @media (prefers-color-scheme: dark) { .search-mode button.active { color: #0b1813; } }
+    .search-wrap { position: relative; display: block; }
+    .search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      transform: translateY(-50%);
+      color: var(--ink-soft);
+      pointer-events: none;
+    }
+    #search {
+      width: 100%;
+      min-height: 50px;
+      padding: 11px 16px 11px 48px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--ink);
+      box-shadow: 0 1px 0 rgba(255,255,255,.5) inset;
+    }
+    #search::placeholder { color: var(--ink-soft); opacity: .85; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .song-list { display: grid; gap: 12px; }
+    .album-group-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+      margin: 12px 0 0;
+      padding: 12px 2px 5px;
+      border-bottom: 1px solid var(--line);
+    }
+    .album-group-heading:first-child { margin-top: 0; }
+    .album-group-heading strong { min-width: 0; font-size: 17px; line-height: 1.35; }
+    .album-group-heading span { flex: 0 1 auto; color: var(--green); font-size: 12px; text-align: right; }
+    .artist-directory {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .artist-choice {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 4px 12px;
+      align-items: center;
+      min-width: 0;
+      padding: 15px 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      background: var(--surface);
+      text-align: left;
+      cursor: pointer;
+    }
+    .artist-choice:hover { border-color: var(--green); }
+    .artist-choice strong { min-width: 0; font-size: 16px; line-height: 1.35; }
+    .artist-choice span { color: var(--green); font-family: var(--font-en); font-size: 13px; }
+    .artist-choice small { grid-column: 2; grid-row: 1 / 3; color: var(--ink-soft); font-size: 11px; white-space: nowrap; }
+    .load-more {
+      width: 100%;
+      min-height: 46px;
+      margin-top: 14px;
+      border: 1px solid var(--green);
+      border-radius: 8px;
+      color: var(--green);
+      background: transparent;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .load-more[hidden] { display: none; }
+    .load-more:hover { color: #fff; background: var(--green); }
+    @media (prefers-color-scheme: dark) { .load-more:hover { color: #0b1813; } }
+    .song-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 154px minmax(0, 1fr);
+      gap: 16px;
+      min-width: 0;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+      transition: border-color .18s ease, background-color .18s ease, box-shadow .18s ease;
+    }
+    .song-card:hover { border-color: color-mix(in srgb, var(--green) 55%, var(--line)); }
+    .song-card.selected {
+      border-color: var(--green);
+      background: var(--surface-raised);
+      box-shadow: 0 0 0 1px var(--green);
+    }
+    .thumb-link {
+      position: relative;
+      display: block;
+      align-self: start;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      border-radius: 6px;
+      background: #000;
+      cursor: pointer;
+    }
+    .thumb-link img { width: 100%; height: 100%; display: block; object-fit: cover; }
+    .song-fallback {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      color: var(--green);
+      background: var(--green-faint);
+    }
+    .song-fallback svg { width: 38%; height: 38%; }
+    .lyrics-availability {
+      display: inline-flex;
+      align-items: center;
+      color: var(--green);
+      font-weight: 700;
+    }
+    .lyrics-availability.missing { color: var(--accent); }
+    .play {
+      position: absolute;
+      left: 10px;
+      bottom: 9px;
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      color: #fff;
+      background: rgba(10, 12, 11, .83);
+      box-shadow: 0 2px 8px rgba(0,0,0,.3);
+    }
+    .play svg { width: 14px; height: 14px; margin-left: 2px; }
+    .song-copy { min-width: 0; }
+    .title-line { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+    .song-title { margin: 0; font-size: 21px; line-height: 1.25; color: var(--ink); }
+    .track { color: var(--accent); font-family: var(--font-en); font-size: 15px; white-space: nowrap; }
+    .romanized { margin: 2px 0 6px; color: var(--green); font-family: var(--font-en); font-size: 16px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 3px 8px; color: var(--ink-soft); font-size: 12px; }
+    .meta span:not(:last-child)::after { content: "·"; margin-left: 8px; }
+    .lyrics-match {
+      margin: 10px 0 0;
+      padding: 9px 11px;
+      border-radius: 6px;
+      color: var(--ink);
+      background: var(--green-faint);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+    .lyrics-match::before { content: "“"; color: var(--accent); font-size: 18px; font-weight: 700; }
+    .lyrics-match::after { content: "”"; color: var(--accent); font-size: 18px; font-weight: 700; }
+    .card-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .share-pair { display: contents; }
+    .action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 34px;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      background: var(--surface);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .action svg { width: 15px; height: 15px; flex: 0 0 auto; }
+    .action[aria-busy="true"] { cursor: wait; opacity: .68; }
+    .action:disabled { cursor: not-allowed; opacity: .48; }
+    .action.primary { border-color: var(--green); background: var(--green); color: #fff; }
+    .action:hover:not(:disabled) { border-color: var(--green); }
+    @media (prefers-color-scheme: dark) { .action.primary { color: #0b1813; } }
+    .inline-player {
+      grid-column: 1 / -1;
+      min-width: 0;
+      padding-top: 2px;
+    }
+    .inline-player iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 7px;
+      background: #000;
+    }
+    .inline-player-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 2px 1px;
+    }
+    .inline-player-foot span {
+      min-width: 0;
+      overflow: hidden;
+      color: var(--ink-soft);
+      font-size: 11px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .inline-player-stop {
+      flex: 0 0 auto;
+      padding: 3px 0;
+      border: 0;
+      color: var(--green);
+      background: transparent;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .player-shell {
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .player-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 22px;
+    }
+    .player-launch {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr);
+      gap: 11px;
+      align-items: center;
+      min-width: 0;
+      flex: 1 1 auto;
+      padding: 7px 10px 7px 7px;
+      border: 1px solid var(--green);
+      border-radius: 7px;
+      color: #fff;
+      background: var(--green);
+      text-align: left;
+      cursor: pointer;
+    }
+    .player-launch-icon {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 32px;
+      border-radius: 5px;
+      color: var(--green);
+      background: #fff;
+    }
+    .player-launch-icon svg { width: 17px; height: 17px; }
+    .player-launch-copy { min-width: 0; }
+    .player-launch-copy strong, .player-launch-copy span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .player-launch-copy strong { font-size: 13px; }
+    .player-launch-copy span { opacity: .82; font-size: 11px; font-weight: 500; }
+    .youtube-external {
+      flex: 0 0 auto;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .player-frame-wrap { padding: 0 22px 18px; }
+    .player-frame-wrap[hidden] { display: none; }
+    .player-frame {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+      border-radius: 8px;
+      background: #000;
+    }
+    .player-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding-top: 9px;
+    }
+    .player-now { min-width: 0; color: var(--ink-soft); font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .player-close {
+      flex: 0 0 auto;
+      border: 0;
+      padding: 4px 0;
+      color: var(--green);
+      background: transparent;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    @media (prefers-color-scheme: dark) {
+      .action.primary { color: #0b1813; }
+      .player-launch { color: #0b1813; }
+      .player-launch-icon { color: #0b1813; }
+    }
+    .lyrics-panel {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: visible;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .lyrics-hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 22px;
+      padding: 22px;
+      background: var(--green-faint);
+      border-bottom: 1px solid var(--line);
+    }
+    .lyrics-cover {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 7px;
+      background: #000;
+    }
+    .lyrics-cover img { width: 100%; height: 100%; display: block; object-fit: cover; }
+    .lyrics-kicker { color: var(--accent); font-size: 12px; font-weight: 700; }
+    .lyrics-title { margin: 4px 0 3px; font-size: 29px; line-height: 1.2; }
+    .lyrics-sub { margin: 0; color: var(--green); font-family: var(--font-en); font-size: 17px; }
+    .lyrics-meta { margin: 8px 0 0; color: var(--ink-soft); font-size: 12px; }
+    .close {
+      display: none;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--ink);
+      background: var(--surface);
+      cursor: pointer;
+    }
+    .close svg { width: 19px; height: 19px; }
+    .lyrics-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      padding: 14px 22px;
+      border-bottom: 1px solid var(--line);
+    }
+    .lyrics-actions[hidden] { display: none; }
+    .lyrics-actions .action { min-height: 40px; padding: 9px 13px; font-size: 13px; }
+    .file-note { align-self: center; color: var(--ink-soft); font-size: 11px; }
+    .versions {
+      position: relative;
+      z-index: 2;
+      flex: 0 0 auto;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface-raised);
+    }
+    .versions-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+      padding: 13px 22px;
+      cursor: pointer;
+      list-style: none;
+    }
+    .versions-head::-webkit-details-marker { display: none; }
+    .versions-head::after {
+      content: "+";
+      color: var(--accent);
+      font-family: var(--font-en);
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 600;
+    }
+    .versions[open] .versions-head::after { content: "−"; }
+    .versions h3 { margin: 0; font-size: 14px; }
+    .versions-summary { margin-left: auto; color: var(--ink-soft); font-size: 11px; text-align: right; }
+    .version-list { display: grid; gap: 8px; padding: 0 22px 18px; }
+    .version-link {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr) auto;
+      gap: 11px;
+      align-items: center;
+      width: 100%;
+      min-width: 0;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      background: var(--surface);
+      text-align: left;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .version-link:hover, .version-link.active { border-color: var(--green); }
+    .version-link.active { background: var(--green-faint); }
+    .version-link img,
+    .version-link > .song-fallback {
+      width: 72px;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 5px;
+      background: var(--green-faint);
+    }
+    .version-link > .song-fallback svg { width: 24px; height: 24px; }
+    .version-copy { min-width: 0; }
+    .version-copy strong, .version-copy span { display: block; }
+    .version-copy strong { font-size: 13px; line-height: 1.35; }
+    .version-copy span { color: var(--ink-soft); font-size: 11px; line-height: 1.4; }
+    .version-arrow { color: var(--green); font-size: 18px; }
+    .lyrics-scroll {
+      position: relative;
+      z-index: 1;
+      flex: 0 0 auto;
+      overflow: visible;
+      padding: 34px clamp(28px, 4vw, 54px) 56px;
+    }
+    .lyrics-scroll h3 { margin: 0 0 24px; color: var(--ink-soft); font-size: 14px; font-weight: 600; }
+    .copy-feedback {
+      align-self: center;
+      min-width: 5.5em;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .share-dialog {
+      width: min(430px, calc(100vw - 28px));
+      max-width: none;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--ink);
+      background: var(--surface);
+      box-shadow: 0 24px 70px rgba(10, 24, 18, .28);
+    }
+    .share-dialog::backdrop { background: rgba(7, 16, 12, .58); }
+    .share-sheet { padding: 22px; }
+    .share-sheet-head { display: flex; align-items: start; justify-content: space-between; gap: 18px; }
+    .share-sheet-head h2 { font-size: 22px; }
+    .share-sheet-song { margin: 5px 0 0; color: var(--ink-soft); font-size: 13px; }
+    .share-sheet-close {
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--ink);
+      background: transparent;
+      cursor: pointer;
+    }
+    .share-sheet-close svg { width: 18px; height: 18px; }
+    .share-options { display: grid; gap: 9px; margin-top: 20px; }
+    .share-option {
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr);
+      gap: 12px;
+      align-items: center;
+      width: 100%;
+      min-height: 62px;
+      padding: 11px 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      background: var(--surface-raised);
+      text-align: left;
+      cursor: pointer;
+    }
+    .share-option:hover:not(:disabled) { border-color: var(--green); }
+    .share-option:disabled { cursor: wait; opacity: .58; }
+    .share-option-icon {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 7px;
+      color: var(--green);
+      background: var(--green-faint);
+    }
+    .share-option-icon svg { width: 19px; height: 19px; }
+    .share-option-copy strong, .share-option-copy span { display: block; }
+    .share-option-copy strong { font-size: 14px; }
+    .share-option-copy span { margin-top: 1px; color: var(--ink-soft); font-size: 11px; line-height: 1.35; }
+    .share-status { min-height: 20px; margin: 13px 2px 0; color: var(--ink-soft); font-size: 12px; }
+    .toast {
+      position: fixed;
+      z-index: 120;
+      left: 50%;
+      bottom: max(22px, env(safe-area-inset-bottom));
+      max-width: calc(100vw - 32px);
+      padding: 10px 14px;
+      border-radius: 7px;
+      color: #fff;
+      background: #173f31;
+      box-shadow: 0 8px 26px rgba(0,0,0,.22);
+      font-size: 13px;
+      font-weight: 700;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, 10px);
+      transition: opacity .16s ease, transform .16s ease;
+    }
+    .toast.visible { opacity: 1; transform: translate(-50%, 0); }
+    .stanza, .lyrics-text { margin: 0; color: var(--ink); font-size: clamp(18px, 1.6vw, 22px); line-height: 1.95; font-weight: 500; }
+    .stanza { margin-bottom: 28px; }
+    .lyrics-text { white-space: pre-wrap; }
+    .lyrics-missing {
+      padding: 34px 22px;
+      border: 1px dashed var(--line);
+      border-radius: 10px;
+      color: var(--ink-soft);
+      text-align: center;
+    }
+    .lyrics-missing strong { display: block; margin-bottom: 7px; color: var(--ink); font-size: 18px; }
+    .empty {
+      display: none;
+      padding: 46px 18px;
+      border: 1px dashed var(--line);
+      border-radius: 10px;
+      color: var(--ink-soft);
+      text-align: center;
+    }
+    .empty.visible { display: block; }
+
+    @media (max-width: 1080px) {
+      .workspace { grid-template-columns: minmax(0, 1fr); }
+      .lyrics-panel {
+        position: fixed;
+        z-index: 50;
+        inset: 0;
+        width: 100vw;
+        height: 100dvh;
+        max-height: none;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+        -webkit-overflow-scrolling: touch;
+        border: 0;
+        border-radius: 0;
+        transform: translateX(104%);
+        transition: none;
+      }
+      .lyrics-scroll {
+        flex: 0 0 auto;
+        min-height: 0;
+        overflow: visible;
+      }
+      .lyrics-panel.is-open { transform: translateX(0); }
+      .close { display: inline-flex; }
+      body.panel-open { overflow: hidden; }
+    }
+    @media (max-width: 650px) {
+      .shell { padding: 18px 14px 30px; }
+      .intro { grid-template-columns: 1fr; gap: 18px; padding-top: 2px; }
+      h1 { font-size: clamp(30px, 9vw, 42px); }
+      .count-block { min-width: 0; padding: 4px 0 0; border-left: 0; text-align: left; }
+      .count-block strong { display: inline; margin-right: 6px; font-size: 31px; }
+      .album-index { padding-top: 24px; }
+      .album-index-head { align-items: start; flex-direction: column; gap: 8px; }
+      .album-count { white-space: normal; }
+      .artist-grid { grid-template-columns: minmax(0, 1fr); }
+      .artist-entry { padding: 16px 0; }
+      .artist-head { align-items: start; }
+      .album-summary { grid-template-columns: minmax(0, 1fr) auto; gap: 6px 10px; }
+      .album-summary .album-meta { grid-column: 1; grid-row: 2; text-align: left; }
+      .album-track-count { grid-column: 2; grid-row: 2; text-align: right; }
+      .album-summary::after { grid-column: 2; grid-row: 1; }
+      .track-row { grid-template-columns: 24px minmax(0, 1fr) auto; gap: 8px; }
+      .track-duration { grid-column: 3; grid-row: 1; }
+      .track-status { grid-column: 2 / -1; justify-self: start; text-align: left; }
+      .review-head { align-items: start; flex-direction: column; gap: 8px; }
+      .review-source { white-space: normal; }
+      .review-list { grid-template-columns: minmax(0, 1fr); }
+      .review-list li { grid-template-columns: 28px minmax(0, 1fr); }
+      .review-note { grid-column: 2; }
+      .workspace { padding-top: 24px; }
+      .artist-directory { grid-template-columns: minmax(0, 1fr); }
+      .sort-tools { align-items: stretch; flex-direction: column; gap: 7px; }
+      .sort-mode { width: 100%; }
+      .sort-mode button { padding-inline: 7px; font-size: 12px; }
+      .search-mode { width: 100%; }
+      .search-mode button { padding-inline: 6px; font-size: 12px; }
+      .album-group-heading { align-items: flex-start; flex-direction: column; gap: 2px; }
+      .album-group-heading span { text-align: left; }
+      .song-card { grid-template-columns: 118px minmax(0, 1fr); gap: 12px; padding: 10px; }
+      .song-title { font-size: 18px; }
+      .romanized { font-size: 14px; }
+      .meta { font-size: 11px; }
+      .card-actions {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        margin-top: 0;
+      }
+      .card-actions .action {
+        width: 100%;
+        min-width: 0;
+        min-height: 32px;
+        padding: 5px 6px;
+        gap: 5px;
+        font-size: 11px;
+        line-height: 1.25;
+      }
+      .share-pair {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+      }
+      .card-actions .action svg { width: 14px; height: 14px; }
+      .lyrics-hero { grid-template-columns: 110px minmax(0, 1fr); gap: 14px; padding: 62px 16px 16px; }
+      .lyrics-title { font-size: 24px; }
+      .lyrics-actions { padding: 12px 16px; }
+      .lyrics-actions .action { flex: 1 1 calc(50% - 5px); }
+      .file-note { width: 100%; }
+      .player-bar { align-items: stretch; padding: 12px 16px; }
+      .player-launch { grid-template-columns: 40px minmax(0, 1fr); }
+      .player-launch-icon { width: 40px; }
+      .youtube-external { display: inline-flex; align-items: center; }
+      .player-frame-wrap { padding: 0 16px 14px; }
+      .versions-head { padding: 12px 16px; }
+      .version-list { padding: 0 16px 14px; }
+      .lyrics-scroll { padding: 28px 22px 44px; }
+      .stanza { font-size: 19px; line-height: 1.9; }
+    }
+    @media (max-width: 390px) {
+      .song-card { grid-template-columns: 100px minmax(0, 1fr); }
+      .lyrics-hero { grid-template-columns: 1fr; }
+      .lyrics-cover { width: 160px; }
+      .version-link { grid-template-columns: 62px minmax(0, 1fr) auto; }
+      .version-link img, .version-link > .song-fallback { width: 62px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+    @media print {
+      .lyrics-panel { position: static; max-height: none; box-shadow: none; }
+      .list-column, .lyrics-actions, .close { display: none !important; }
+      .workspace { display: block; }
+      .lyrics-scroll { overflow: visible; }
+    }
+  </style>
+</head>
+<body class="notranslate" translate="no">
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-heading">
+      <div>
+        <h1 id="page-heading">የአማርኛ መዝሙር ዝርዝር</h1>
+        <p>መዝሙሮችን በርዕስ፣ በዘማሪ ስም ወይም በሚያስታውሱት የግጥም መስመር ይፈልጉ። ግጥም ያለውን ማንበብ፣ መቅዳትና ፋይል ማውረድ ይቻላል፤ YouTube ሊንክ ወይም ግጥም ያልገባለት መዝሙር በግልጽ ምልክት ይታያል።</p>
+      </div>
+      <div class="count-block" id="catalogCount" aria-live="polite">
+        <strong>1,798</strong><span>መዝሙሮች · 73 ዘማሪዎች · 1,427 YouTube ሊንኮች</span>
+      </div>
+    </section>
+
+    <div class="workspace">
+      <section class="list-column" aria-labelledby="list-title">
+        <div class="list-head">
+          <h2 id="list-title">መዝሙሮችና ዘማሪዎች</h2>
+          <span id="resultCount" class="result-count" aria-live="polite">1,798 መዝሙሮች</span>
+        </div>
+        <div class="search-tools">
+          <div class="search-mode" role="group" aria-label="የፍለጋ ዓይነት">
+            <button id="searchBySong" class="active" type="button" aria-pressed="true">በመዝሙር ፈልግ</button>
+            <button id="searchByArtist" type="button" aria-pressed="false">በዘማሪ ፈልግ</button>
+            <button id="searchByLyrics" type="button" aria-pressed="false">በግጥም ፈልግ</button>
+          </div>
+          <div class="sort-tools">
+            <span class="sort-label" id="sortLabel">የዝርዝር ቅደም ተከተል</span>
+            <div class="sort-mode" role="group" aria-labelledby="sortLabel">
+              <button id="sortByTitle" class="active" type="button" aria-pressed="true">በመዝሙር ርዕስ</button>
+              <button id="sortByAlbum" type="button" aria-pressed="false">በአልበም ተራ</button>
+            </div>
+          </div>
+          <label class="search-wrap">
+            <span class="search-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg></span>
+            <span id="searchLabel" class="sr-only">መዝሙር በርዕስ ይፈልጉ</span>
+            <input id="search" type="search" placeholder="የመዝሙር ርዕስ ይጻፉ…" autocomplete="off" />
+          </label>
+        </div>
+        <div id="songList" class="song-list"></div>
+        <button id="loadMore" class="load-more" type="button" hidden></button>
+        <div id="empty" class="empty">የሚዛመድ ውጤት አልተገኘም። ሌላ ቃል ይሞክሩ።</div>
+      </section>
+
+      <aside id="lyricsPanel" class="lyrics-panel" aria-labelledby="lyricsTitle">
+        <div class="lyrics-hero">
+          <button class="close" id="closePanel" type="button" aria-label="ግጥሙን ዝጋ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"></path></svg></button>
+          <div id="lyricsCover" class="lyrics-cover"><img id="lyricsThumb" src="assets/thumbnails/amelkihalehu.jpg" alt="አመልክሀለሁ የYouTube ቪዲዮ ምስል" /></div>
+          <div>
+            <div class="lyrics-kicker">አንድ ልዩ ግጥም</div>
+            <h2 id="lyricsTitle" class="lyrics-title">አመልክሀለሁ</h2>
+            <p id="lyricsSub" class="lyrics-sub">Amelkihalehu</p>
+            <p id="lyricsMeta" class="lyrics-meta">ሃና ተክሌ · Meswaet · 1 YouTube ሊንክ</p>
+          </div>
+        </div>
+        <div id="lyricsActions" class="lyrics-actions">
+          <button id="powerpointLink" class="action primary" type="button" data-kind="pptx" aria-describedby="fileNote">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>
+            PowerPoint ያውርዱ
+          </button>
+          <button id="wordLink" class="action" type="button" data-kind="docx" aria-describedby="fileNote">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>
+            Word ያውርዱ
+          </button>
+          <button id="copyLyrics" class="action" type="button" aria-describedby="copyFeedback">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="8" width="11" height="12" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"></path></svg>
+            ግጥሙን ይቅዱ
+          </button>
+          <button id="shareLyrics" class="action" type="button" aria-describedby="copyFeedback">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"></path></svg>
+            ግጥሙን ያጋሩ
+          </button>
+          <span id="copyFeedback" class="copy-feedback" role="status" aria-live="polite"></span>
+          <span id="fileNote" class="file-note">ፋይሉ ሲከፈት የመሣሪያዎን Share ይጫኑ</span>
+        </div>
+        <section id="playerShell" class="player-shell" aria-label="የመዝሙር ማጫወቻ">
+          <div class="player-bar">
+            <button id="playInApp" class="player-launch" type="button" aria-expanded="false" aria-controls="playerFrameWrap">
+              <span class="player-launch-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 11 7-11 7Z"></path></svg></span>
+              <span class="player-launch-copy"><strong>እዚሁ ያጫውቱ</strong><span id="playerSelection">ዋናው መዝሙር</span></span>
+            </button>
+            <a id="openYouTube" class="youtube-external" href="https://www.youtube.com/watch?v=TDx5z3sU4P4" target="_blank" rel="noopener noreferrer">YouTube ላይ ይክፈቱ ↗</a>
+          </div>
+          <div id="playerFrameWrap" class="player-frame-wrap" hidden>
+            <iframe id="youtubePlayer" class="player-frame" title="የYouTube መዝሙር ማጫወቻ" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="origin" allowfullscreen></iframe>
+            <div class="player-foot">
+              <span id="playerNow" class="player-now"></span>
+              <button id="closePlayer" class="player-close" type="button">ማጫወቻውን ዝጋ</button>
+            </div>
+          </div>
+        </section>
+        <details id="versionsPanel" class="versions">
+          <summary class="versions-head">
+            <h3 id="versionsTitle">1 የYouTube ሊንክ</h3>
+            <span id="versionsSummary" class="versions-summary">ዋናው መዝሙር</span>
+          </summary>
+          <div id="versionList" class="version-list"></div>
+        </details>
+        <div class="lyrics-scroll" id="lyricsScroll">
+          <h3 id="lyricsHeading">የጋራ ግጥም</h3>
+          <div id="lyricsBody"></div>
+        </div>
+      </aside>
+    </div>
+
+
+  </main>
+
+  <dialog id="shareDialog" class="share-dialog" aria-labelledby="shareDialogTitle">
+    <div class="share-sheet">
+      <div class="share-sheet-head">
+        <div>
+          <h2 id="shareDialogTitle">Share song</h2>
+          <p id="shareDialogSong" class="share-sheet-song"></p>
+        </div>
+        <button id="closeShareDialog" class="share-sheet-close" type="button" aria-label="Close share options">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+        </button>
+      </div>
+      <div class="share-options">
+        <button id="shareImageOption" class="share-option" type="button">
+          <span class="share-option-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="8.5" cy="9" r="1.5"></circle><path d="m4 17 5-5 4 4 2-2 5 5"></path></svg></span>
+          <span class="share-option-copy"><strong id="shareImageLabel">Share as image</strong><span>Send the full lyrics through WhatsApp, Telegram, and other apps</span></span>
+        </button>
+        <button id="copySongLinkOption" class="share-option" type="button">
+          <span class="share-option-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1.1 1.1"></path><path d="M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1.1-1.1"></path></svg></span>
+          <span class="share-option-copy"><strong>Copy song link</strong><span>Open this page at this exact song card</span></span>
+        </button>
+      </div>
+      <p id="shareStatus" class="share-status" role="status" aria-live="polite"></p>
+    </div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/catalog.js"></script>
+  <script>
+    function formatLyricsText(value) {
+      return String(value || '')
+        .replace(/\r\n?/g, '\n')
+        .split('\n')
+        .map(line => line.trimEnd())
+        .join('\n')
+        .trim();
+    }
+
+    const songs = window.CATALOG_DATA.map((entry, index) => {
+      const titleAm = entry.title_am || entry.title || `Untitled ${index + 1}`;
+      const titleEn = entry.title_am ? (entry.title || '') : '';
+      const albums = Array.isArray(entry.albums) ? entry.albums.filter(Boolean) : [];
+      const videos = Array.isArray(entry.videos) ? entry.videos.map(video => {
+        const sourceParts = [];
+        if (video.album) sourceParts.push(video.album);
+        if (video.track_no !== null && video.track_no !== undefined && video.track_no !== '') sourceParts.push(`Track ${video.track_no}`);
+        const possibleLabel = video.possible_version ? ' (possible version)' : '';
+        const videoId = youtubeVideoId(video.url) || video.video_id || '';
+        return {
+          label: `${titleAm}${possibleLabel}`,
+          note: sourceParts.join(' · ') || 'YouTube',
+          href: video.url,
+          thumb: videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : '',
+          videoId,
+          confidence: video.confidence || '',
+          possibleVersion: Boolean(video.possible_version),
+          album: video.album || '',
+          trackNo: video.track_no
+        };
+      }) : [];
+      const primaryAlbum = (videos.find(video => video.album) || {}).album || albums[0] || 'አልበም ያልተገለጸ';
+      const trackVideo = videos.find(video => video.album === primaryAlbum && video.trackNo !== null && video.trackNo !== undefined && video.trackNo !== '')
+        || videos.find(video => video.trackNo !== null && video.trackNo !== undefined && video.trackNo !== '');
+      return {
+        id: `catalog-${index + 1}`,
+        sourceIndex: index,
+        titleAm,
+        titleEn,
+        artistAm: entry.artist || '',
+        artistEn: '',
+        album: albums.join(' · ') || '—',
+        albums,
+        primaryAlbum,
+        albumTrack: trackVideo ? Number(trackVideo.trackNo) : null,
+        track: videos[0] && videos[0].trackNo !== null && videos[0].trackNo !== undefined ? String(videos[0].trackNo) : '',
+        theme: albums.join(' '),
+        thumb: videos[0] ? videos[0].thumb : '',
+        lyrics: formatLyricsText(entry.lyrics),
+        noVideo: Boolean(entry.no_video),
+        videos
+      };
+    });
+
+    const totalVideoLinks = songs.reduce((total, song) => total + song.videos.length, 0);
+    const totalArtists = new Set(songs.map(song => song.artistAm)).size;
+    const catalogCount = document.getElementById('catalogCount');
+    catalogCount.querySelector('strong').textContent = songs.length.toLocaleString();
+    catalogCount.querySelector('span').textContent = `መዝሙሮች · ${totalArtists.toLocaleString()} ዘማሪዎች · ${totalVideoLinks.toLocaleString()} YouTube ሊንኮች`;
+    catalogCount.setAttribute('aria-label', `${songs.length} songs by ${totalArtists} artists with ${totalVideoLinks} unique YouTube links`);
+
+    const icons = {
+      lyrics: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18H6z"></path><path d="M9 8h6M9 12h6M9 16h4"></path></svg>',
+      youtube: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12c0-3-.3-5-1-5.7C19.3 5.5 16.8 5 12 5s-7.3.5-8 1.3C3.3 7 3 9 3 12s.3 5 1 5.7c.7.8 3.2 1.3 8 1.3s7.3-.5 8-1.3c.7-.7 1-2.7 1-5.7Z"></path><path d="m10 9 5 3-5 3Z"></path></svg>',
+      play: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="m8 5 11 7-11 7Z"></path></svg>',
+      copy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="8" width="11" height="12" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"></path></svg>',
+      share: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"></path></svg>',
+      download: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>'
+    };
+
+    document.addEventListener('error', event => {
+      const image = event.target;
+      if (!(image instanceof HTMLImageElement) || image.dataset.youtubeThumb !== 'true') return;
+      const fallback = document.createElement('span');
+      fallback.className = 'song-fallback';
+      fallback.setAttribute('aria-hidden', 'true');
+      fallback.innerHTML = icons.youtube;
+      image.replaceWith(fallback);
+    }, true);
+
+    const listEl = document.getElementById('songList');
+    const emptyEl = document.getElementById('empty');
+    const searchEl = document.getElementById('search');
+    const searchLabel = document.getElementById('searchLabel');
+    const searchBySong = document.getElementById('searchBySong');
+    const searchByArtist = document.getElementById('searchByArtist');
+    const searchByLyrics = document.getElementById('searchByLyrics');
+    const sortByTitle = document.getElementById('sortByTitle');
+    const sortByAlbum = document.getElementById('sortByAlbum');
+    const loadMore = document.getElementById('loadMore');
+    const resultCount = document.getElementById('resultCount');
+    const panel = document.getElementById('lyricsPanel');
+    const playerShell = document.getElementById('playerShell');
+    const versionsPanel = document.getElementById('versionsPanel');
+    const playerFrameWrap = document.getElementById('playerFrameWrap');
+    const youtubePlayer = document.getElementById('youtubePlayer');
+    const playInApp = document.getElementById('playInApp');
+    const shareDialog = document.getElementById('shareDialog');
+    const shareImageOption = document.getElementById('shareImageOption');
+    const copySongLinkOption = document.getElementById('copySongLinkOption');
+    const shareStatus = document.getElementById('shareStatus');
+    const publicPageUrl = 'https://muse.ai/s/amharic-songs-master-list-x0xi6am7csxrpp';
+    const pageSize = 24;
+    let searchMode = 'song';
+    let sortMode = 'title';
+    let visibleLimit = pageSize;
+    let selectedId = songs[0].id;
+    let activeVideoIndex = 0;
+    let inlinePlayingId = null;
+    let shareSongId = null;
+    let preparedShareFile = null;
+    let toastTimer = 0;
+
+    function esc(value) {
+      return String(value).replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
+    }
+
+    function normalizedText(value) {
+      return String(value || '').replace(/፡/g, ' ').replace(/\s+/g, ' ').trim().toLocaleLowerCase();
+    }
+
+    function songSearchText(song) {
+      return normalizedText([song.titleAm, song.titleEn].join(' '));
+    }
+
+    function artistSearchText(song) {
+      return normalizedText([song.artistAm, song.artistEn].join(' '));
+    }
+
+    function lyricsSearchText(song) {
+      return normalizedText(song.lyrics);
+    }
+
+    function lyricsMatchSnippet(song, query) {
+      const normalized = normalizedText(query);
+      if (!normalized || !song.lyrics.trim()) return '';
+      const lines = song.lyrics.split('\n').map(line => line.trim()).filter(Boolean);
+      const normalizedLines = lines.map(normalizedText);
+      const joined = normalizedLines.join(' ');
+      const matchIndex = joined.indexOf(normalized);
+      if (matchIndex < 0) return '';
+      let cursor = 0;
+      let lineIndex = 0;
+      for (; lineIndex < normalizedLines.length; lineIndex += 1) {
+        const lineEnd = cursor + normalizedLines[lineIndex].length;
+        if (matchIndex <= lineEnd) break;
+        cursor = lineEnd + 1;
+      }
+      return lines.slice(lineIndex, lineIndex + 2).join(' · ');
+    }
+
+    function artistGroups() {
+      const groups = new Map();
+      songs.forEach(song => {
+        const key = normalizedText(song.artistEn || song.artistAm);
+        if (!groups.has(key)) groups.set(key, { artistAm: song.artistAm, artistEn: song.artistEn, songs: [] });
+        groups.get(key).songs.push(song);
+      });
+      return Array.from(groups.values()).sort((a, b) => (a.artistEn || a.artistAm).localeCompare(b.artistEn || b.artistAm));
+    }
+
+    function renderArtistDirectory(groups) {
+      resultCount.textContent = `${groups.length.toLocaleString()} ዘማሪዎች`;
+      emptyEl.classList.remove('visible');
+      loadMore.hidden = true;
+      listEl.className = 'artist-directory';
+      listEl.innerHTML = groups.map(group => `
+        <button class="artist-choice" type="button" data-artist="${esc(group.artistEn || group.artistAm)}">
+          <strong>${esc(group.artistAm)}</strong>
+          <span>${esc(group.artistEn)}</span>
+          <small>${group.songs.length} መዝሙሮች</small>
+        </button>`).join('');
+      listEl.querySelectorAll('.artist-choice').forEach(button => {
+        button.addEventListener('click', () => {
+          searchEl.value = button.dataset.artist;
+          visibleLimit = pageSize;
+          renderList(searchEl.value);
+          searchEl.focus({ preventScroll: true });
+        });
+      });
+    }
+
+    const displayedTitleCollator = new Intl.Collator('en', {
+      sensitivity: 'base',
+      numeric: false,
+      ignorePunctuation: false
+    });
+
+    function displayedTitleSortKey(song) {
+      return normalizedText(song.titleAm || song.titleEn).replace(/q/g, 'g');
+    }
+
+    function sortSongsForDisplay(items) {
+      if (sortMode === 'title') {
+        return items.slice().sort((a, b) => {
+          const titleOrder = displayedTitleCollator.compare(displayedTitleSortKey(a), displayedTitleSortKey(b));
+          if (titleOrder) return titleOrder;
+          const displayedTitleOrder = displayedTitleCollator.compare(
+            normalizedText(a.titleAm || a.titleEn),
+            normalizedText(b.titleAm || b.titleEn)
+          );
+          return displayedTitleOrder || a.sourceIndex - b.sourceIndex;
+        });
+      }
+      return items.slice().sort((a, b) => {
+        const artistOrder = normalizedText(a.artistAm).localeCompare(normalizedText(b.artistAm));
+        if (artistOrder) return artistOrder;
+        const albumOrder = normalizedText(a.primaryAlbum).localeCompare(normalizedText(b.primaryAlbum));
+        if (albumOrder) return albumOrder;
+        const aTrack = Number.isFinite(a.albumTrack) ? a.albumTrack : Number.MAX_SAFE_INTEGER;
+        const bTrack = Number.isFinite(b.albumTrack) ? b.albumTrack : Number.MAX_SAFE_INTEGER;
+        if (aTrack !== bTrack) return aTrack - bTrack;
+        return a.sourceIndex - b.sourceIndex;
+      });
+    }
+
+    function staticExportUrl(song, kind) {
+      const baseName = safeFileName(song.titleEn || song.titleAm);
+      return `assets/${kind === 'pptx' ? 'pptx' : 'docx'}/${baseName}-Lyrics-${kind === 'pptx' ? 'PowerPoint.pptx' : 'Word.docx'}`;
+    }
+
+    function renderList(query = '') {
+      const normalized = normalizedText(query);
+      const groups = artistGroups();
+      if (searchMode === 'artist' && !normalized) {
+        renderArtistDirectory(groups);
+        return;
+      }
+
+      const filtered = sortSongsForDisplay(songs.filter(song => {
+        if (searchMode === 'lyrics') {
+          const lyrics = lyricsSearchText(song);
+          return normalized ? lyrics.includes(normalized) : Boolean(lyrics);
+        }
+        const haystack = searchMode === 'artist' ? artistSearchText(song) : songSearchText(song);
+        return haystack.includes(normalized);
+      }));
+      const visibleSongs = filtered.slice(0, visibleLimit);
+      resultCount.textContent = `${filtered.length.toLocaleString()} መዝሙሮች`;
+      emptyEl.classList.toggle('visible', filtered.length === 0);
+      listEl.className = 'song-list';
+      const remaining = Math.max(0, filtered.length - visibleSongs.length);
+      loadMore.hidden = remaining === 0;
+      loadMore.textContent = `ተጨማሪ ${remaining.toLocaleString()} መዝሙሮችን አሳይ`;
+      listEl.innerHTML = visibleSongs.map((song, index) => {
+        const hasLyrics = Boolean(song.lyrics.trim());
+        const hasVideo = song.videos.length > 0;
+        const lyricsSnippet = searchMode === 'lyrics' ? lyricsMatchSnippet(song, query) : '';
+        const previousSong = visibleSongs[index - 1];
+        const startsAlbumGroup = sortMode === 'album' && (!previousSong
+          || previousSong.artistAm !== song.artistAm
+          || previousSong.primaryAlbum !== song.primaryAlbum);
+        const albumHeading = startsAlbumGroup
+          ? `<div class="album-group-heading" role="heading" aria-level="3"><strong>${esc(song.primaryAlbum)}</strong><span>${esc(song.artistAm)}</span></div>`
+          : '';
+        return `${albumHeading}
+        <article id="song-${esc(song.id)}" class="song-card ${song.id === selectedId ? 'selected' : ''}" data-id="${esc(song.id)}">
+          ${hasVideo ? `<button class="thumb-link play-song" type="button" data-id="${esc(song.id)}" aria-label="${esc(song.titleAm)} እዚሁ ያጫውቱ" aria-expanded="${inlinePlayingId === song.id ? 'true' : 'false'}" aria-controls="inline-player-${esc(song.id)}">
+            ${song.thumb ? `<img src="${esc(song.thumb)}" alt="${esc(song.titleAm)} የYouTube ቪዲዮ ምስል" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-youtube-thumb="true" />` : `<span class="song-fallback" aria-hidden="true">${icons.youtube}</span>`}
+            <span class="play" aria-hidden="true">${icons.play}</span>
+          </button>` : `<div class="thumb-link" aria-hidden="true"><span class="song-fallback">${icons.lyrics}</span></div>`}
+          <div class="song-copy">
+            <div class="title-line"><h3 class="song-title">${esc(song.titleAm)}</h3>${song.track ? `<span class="track">#${esc(song.track)}</span>` : ''}</div>
+            ${song.titleEn ? `<p class="romanized">${esc(song.titleEn)}</p>` : ''}
+            <div class="meta"><span>${esc(song.artistAm)}</span><span>${esc(song.album)}</span><span>${hasVideo ? `${song.videos.length} YouTube ${song.videos.length === 1 ? 'ሊንክ' : 'ሊንኮች'}` : 'YouTube ሊንክ የለም'}</span><span class="lyrics-availability ${hasLyrics ? '' : 'missing'}">${hasLyrics ? 'ግጥም አለ' : 'ግጥም ገና አልገባም'}</span></div>
+            ${lyricsSnippet ? `<p class="lyrics-match">${esc(lyricsSnippet)}</p>` : ''}
+            <div class="card-actions">
+              <button class="action open-song" type="button" data-id="${esc(song.id)}">${icons.lyrics} ግጥም</button>
+              ${hasVideo ? `<button class="action play-song" type="button" data-id="${esc(song.id)}" aria-expanded="${inlinePlayingId === song.id ? 'true' : 'false'}" aria-controls="inline-player-${esc(song.id)}">${icons.play} ${inlinePlayingId === song.id ? 'እየተጫወተ ነው' : 'እዚሁ ያጫውቱ'}</button>` : ''}
+              <span class="share-pair">
+                <button class="action copy-song" type="button" data-id="${esc(song.id)}">${icons.copy} ግጥሙን ይቅዱ</button>
+                <button class="action share-song" type="button" data-id="${esc(song.id)}">${icons.share} Share</button>
+              </span>
+              <button class="action primary download-song" type="button" data-id="${esc(song.id)}" data-kind="pptx">${icons.download} PowerPoint ያውርዱ</button>
+              <button class="action download-song" type="button" data-id="${esc(song.id)}" data-kind="docx">${icons.download} Word ያውርዱ</button>
+            </div>
+          </div>
+          ${hasVideo && inlinePlayingId === song.id ? `
+            <div class="inline-player" id="inline-player-${esc(song.id)}">
+              <iframe title="${esc(song.videos[0].label)} — የYouTube መዝሙር ማጫወቻ" src="${esc(youtubeEmbedUrl(song.videos[0].href))}" loading="eager" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="origin" allowfullscreen></iframe>
+              <div class="inline-player-foot">
+                <span>${esc(song.videos[0].label)}</span>
+                <button class="inline-player-stop" type="button" data-id="${esc(song.id)}">ማጫወቻውን ዝጋ</button>
+              </div>
+            </div>` : ''}
+        </article>`;
+      }).join('');
+      listEl.querySelectorAll('.open-song').forEach(button => {
+        button.addEventListener('click', () => selectSong(button.dataset.id, true));
+      });
+      listEl.querySelectorAll('.copy-song').forEach(button => {
+        button.addEventListener('click', async () => {
+          const song = songs.find(item => item.id === button.dataset.id);
+          if (!song) return;
+          try {
+            await copyText(songShareText(song));
+            showToast('Song and lyrics copied');
+          } catch (error) {
+            showToast('Could not copy the lyrics');
+          }
+        });
+      });
+      listEl.querySelectorAll('.share-song').forEach(button => {
+        button.addEventListener('click', () => openShareMenu(button.dataset.id));
+      });
+      listEl.querySelectorAll('.download-song').forEach(button => {
+        button.addEventListener('click', () => exportSongFile(button.dataset.id, button.dataset.kind, button));
+      });
+      listEl.querySelectorAll('.play-song').forEach(button => {
+        button.addEventListener('click', () => {
+          inlinePlayingId = button.dataset.id;
+          selectSong(button.dataset.id, false, true);
+          requestAnimationFrame(() => {
+            const inlinePlayer = document.getElementById(`inline-player-${button.dataset.id}`);
+            if (inlinePlayer) inlinePlayer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          });
+        });
+      });
+      listEl.querySelectorAll('.inline-player-stop').forEach(button => {
+        button.addEventListener('click', () => {
+          inlinePlayingId = null;
+          renderList(searchEl.value);
+          const playButton = listEl.querySelector(`.play-song[data-id="${button.dataset.id}"]`);
+          if (playButton) playButton.focus();
+        });
+      });
+    }
+
+    function youtubeVideoId(href) {
+      try {
+        const url = new URL(href);
+        const hostname = url.hostname.toLowerCase().replace(/^www\./, '');
+        let candidate = '';
+        if (hostname === 'youtu.be') {
+          candidate = url.pathname.split('/').filter(Boolean)[0] || '';
+        } else if (hostname === 'youtube.com' || hostname.endsWith('.youtube.com')) {
+          candidate = url.searchParams.get('v') || '';
+          if (!candidate) {
+            const pathMatch = url.pathname.match(/^\/(?:shorts|embed|live)\/([^/?#]+)/);
+            candidate = pathMatch ? pathMatch[1] : '';
+          }
+        }
+        return /^[A-Za-z0-9_-]{11}$/.test(candidate) ? candidate : '';
+      } catch (error) {
+        return '';
+      }
+    }
+
+    function youtubeEmbedUrl(href) {
+      const videoId = youtubeVideoId(href);
+      if (!videoId) return '';
+      const params = new URLSearchParams({
+        autoplay: '1',
+        playsinline: '1',
+        rel: '0'
+      });
+      return `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?${params.toString()}`;
+    }
+
+    function stopPlayer() {
+      youtubePlayer.removeAttribute('src');
+      playerFrameWrap.hidden = true;
+      playInApp.setAttribute('aria-expanded', 'false');
+    }
+
+    function setActiveVideo(index, startPlaying = false) {
+      const song = songs.find(item => item.id === selectedId);
+      if (!song || !song.videos[index]) return;
+      activeVideoIndex = index;
+      const video = song.videos[index];
+      document.getElementById('playerSelection').textContent = video.label;
+      document.getElementById('playerNow').textContent = video.label;
+      document.getElementById('openYouTube').href = video.href;
+      document.querySelectorAll('.version-link').forEach((button, buttonIndex) => {
+        const isActive = buttonIndex === activeVideoIndex;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+      if (startPlaying) {
+        const embedUrl = youtubeEmbedUrl(video.href);
+        if (!embedUrl) return;
+        if (inlinePlayingId !== null) {
+          inlinePlayingId = null;
+          renderList(searchEl.value);
+        }
+        youtubePlayer.title = `${video.label} — የYouTube መዝሙር ማጫወቻ`;
+        youtubePlayer.src = embedUrl;
+        playerFrameWrap.hidden = false;
+        playInApp.setAttribute('aria-expanded', 'true');
+        playerFrameWrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    function selectSong(id, openOnMobile = false, keepInlinePlayer = false) {
+      const song = songs.find(item => item.id === id);
+      if (!song) return;
+      selectedId = id;
+      activeVideoIndex = 0;
+      if (!keepInlinePlayer) inlinePlayingId = null;
+      stopPlayer();
+      const hasLyrics = Boolean(song.lyrics.trim());
+      const hasVideo = song.videos.length > 0;
+      const lyricsCover = document.getElementById('lyricsCover');
+      lyricsCover.innerHTML = song.thumb
+        ? `<img id="lyricsThumb" src="${esc(song.thumb)}" alt="${esc(song.titleAm)} የYouTube ቪዲዮ ምስል" decoding="async" referrerpolicy="no-referrer" data-youtube-thumb="true" />`
+        : `<span class="song-fallback" aria-hidden="true">${hasVideo ? icons.youtube : icons.lyrics}</span>`;
+      document.querySelector('.lyrics-kicker').textContent = hasLyrics ? 'አንድ ልዩ ግጥም' : 'ግጥም ገና አልገባም';
+      document.getElementById('lyricsTitle').textContent = song.titleAm;
+      document.getElementById('lyricsSub').textContent = song.titleEn;
+      const versionSummary = !hasVideo
+        ? 'YouTube ሊንክ የለም'
+        : song.videos.length === 1
+          ? 'ዋናው መዝሙር'
+          : `1 ዋና መዝሙር · ${song.videos.length - 1} ልዩ አቀራረቦች`;
+      document.getElementById('lyricsMeta').textContent = `${song.artistAm} · ${song.album} · ${hasVideo ? `${song.videos.length} YouTube ${song.videos.length === 1 ? 'ሊንክ' : 'ሊንኮች'}` : 'YouTube ሊንክ የለም'}`;
+      playerShell.hidden = !hasVideo;
+      versionsPanel.hidden = !hasVideo;
+      const lyricsActions = document.getElementById('lyricsActions');
+      lyricsActions.hidden = !hasLyrics;
+      if (hasLyrics) {
+        document.getElementById('powerpointLink').dataset.id = song.id;
+        document.getElementById('wordLink').dataset.id = song.id;
+      }
+      document.getElementById('versionsTitle').textContent = `${song.videos.length} የYouTube ${song.videos.length === 1 ? 'ሊንክ' : 'ሊንኮች'}`;
+      document.getElementById('versionsSummary').textContent = versionSummary;
+      document.getElementById('copyFeedback').textContent = '';
+      document.getElementById('versionList').innerHTML = song.videos.map((video, index) => `
+        <button class="version-link ${index === 0 ? 'active' : ''}" type="button" data-video-index="${index}" aria-pressed="${index === 0 ? 'true' : 'false'}">
+          ${video.thumb ? `<img src="${esc(video.thumb)}" alt="${esc(video.label)} የYouTube ቪዲዮ ምስል" loading="lazy" decoding="async" referrerpolicy="no-referrer" data-youtube-thumb="true" />` : `<span class="song-fallback" aria-hidden="true">${icons.youtube}</span>`}
+          <span class="version-copy"><strong>${esc(video.label)}</strong><span>${esc(video.note)}</span></span>
+          <span class="version-arrow" aria-hidden="true">▶</span>
+        </button>`).join('');
+      document.querySelectorAll('.version-link').forEach(button => {
+        button.addEventListener('click', () => setActiveVideo(Number(button.dataset.videoIndex), true));
+      });
+      if (hasVideo) setActiveVideo(0, false);
+      document.getElementById('lyricsHeading').textContent = hasLyrics ? 'የጋራ ግጥም' : 'የመዝሙሩ ሁኔታ';
+      document.getElementById('lyricsBody').innerHTML = hasLyrics
+        ? `<div class="lyrics-text">${esc(song.lyrics.trim())}</div>`
+        : hasVideo
+          ? '<div class="lyrics-missing"><strong>ግጥሙ ገና አልተጨመረም</strong><span>የYouTube መዝሙሩን ከላይ ማጫወት ይችላሉ።</span></div>'
+          : '<div class="lyrics-missing"><strong>ግጥሙ ገና አልተጨመረም</strong><span>የYouTube ሊንክም ገና አልተጨመረለትም።</span></div>';
+      document.getElementById('lyricsScroll').scrollTop = 0;
+      panel.scrollTop = 0;
+      renderList(searchEl.value);
+      if (openOnMobile && window.matchMedia('(max-width: 1080px)').matches) {
+        panel.classList.add('is-open');
+        document.body.classList.add('panel-open');
+        document.getElementById('closePanel').focus();
+      }
+    }
+
+    function closePanel() {
+      stopPlayer();
+      panel.classList.remove('is-open');
+      document.body.classList.remove('panel-open');
+    }
+
+    function selectedLyricsText() {
+      const song = songs.find(item => item.id === selectedId);
+      return song ? `${song.titleAm} (${song.titleEn})\n\n${song.lyrics.trim()}` : '';
+    }
+
+    function legacyCopyText(text) {
+      const field = document.createElement('textarea');
+      field.value = text;
+      field.setAttribute('readonly', '');
+      field.style.position = 'fixed';
+      field.style.top = '0';
+      field.style.left = '0';
+      field.style.width = '1px';
+      field.style.height = '1px';
+      field.style.opacity = '0';
+      document.body.appendChild(field);
+      field.focus({ preventScroll: true });
+      field.select();
+      field.setSelectionRange(0, field.value.length);
+      const copied = document.execCommand('copy');
+      field.remove();
+      if (!copied) throw new Error('Copy unavailable');
+    }
+
+    async function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(text);
+          return;
+        } catch (error) {
+          // Sandboxed desktop browsers can expose Clipboard API but block it.
+          // Fall through to the user-gesture copy path instead.
+        }
+      }
+      legacyCopyText(text);
+    }
+
+    function showFeedback(message) {
+      const feedback = document.getElementById('copyFeedback');
+      feedback.textContent = message;
+      window.setTimeout(() => { if (feedback.textContent === message) feedback.textContent = ''; }, 2400);
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      window.clearTimeout(toastTimer);
+      toast.textContent = message;
+      toast.classList.add('visible');
+      toastTimer = window.setTimeout(() => toast.classList.remove('visible'), 2400);
+    }
+
+    function songShareText(song) {
+      const album = song.album && song.album !== '—' ? `\n${song.album}` : '';
+      const lyrics = song.lyrics.trim() || 'ግጥሙ ገና አልተጨመረም';
+      return `${song.titleAm}${song.titleEn ? ` (${song.titleEn})` : ''}\n${song.artistAm}${album}\n\n${lyrics}`;
+    }
+
+    function wrapCanvasLine(context, text, maxWidth) {
+      if (!text) return [''];
+      const words = text.split(/\s+/).filter(Boolean);
+      if (!words.length) return [''];
+      const lines = [];
+      let current = words[0];
+      for (let index = 1; index < words.length; index += 1) {
+        const candidate = `${current} ${words[index]}`;
+        if (context.measureText(candidate).width <= maxWidth) {
+          current = candidate;
+        } else {
+          lines.push(current);
+          current = words[index];
+        }
+      }
+      lines.push(current);
+      return lines;
+    }
+
+    function roundedCanvasRect(context, x, y, width, height, radius) {
+      const r = Math.min(radius, width / 2, height / 2);
+      context.beginPath();
+      context.moveTo(x + r, y);
+      context.arcTo(x + width, y, x + width, y + height, r);
+      context.arcTo(x + width, y + height, x, y + height, r);
+      context.arcTo(x, y + height, x, y, r);
+      context.arcTo(x, y, x + width, y, r);
+      context.closePath();
+    }
+
+    async function createSongImageFile(song) {
+      if (document.fonts && document.fonts.ready) await document.fonts.ready;
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      if (!context) throw new Error('Canvas unavailable');
+      const width = 1200;
+      const outer = 44;
+      const inner = 76;
+      const contentWidth = width - (outer + inner) * 2;
+      const family = '"Noto Sans Ethiopic", "Noto Sans", sans-serif';
+      const album = song.album && song.album !== '—' && song.album !== 'አልበም ያልተገለጸ' ? song.album : '';
+      let lyricSize = 44;
+      let lyricLines = [];
+      let lineHeight = 68;
+      let height = 0;
+      while (lyricSize >= 22) {
+        context.font = `500 ${lyricSize}px ${family}`;
+        lyricLines = song.lyrics.trim().split('\n').flatMap(line => wrapCanvasLine(context, line, contentWidth));
+        lineHeight = Math.round(lyricSize * 1.55);
+        height = 360 + lyricLines.length * lineHeight + 120;
+        if (height <= 11800) break;
+        lyricSize -= 2;
+      }
+      canvas.width = width;
+      canvas.height = Math.max(720, height);
+      context.fillStyle = '#eef2ee';
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      roundedCanvasRect(context, outer, outer, width - outer * 2, canvas.height - outer * 2, 28);
+      context.fillStyle = '#ffffff';
+      context.fill();
+      context.save();
+      roundedCanvasRect(context, outer, outer, width - outer * 2, canvas.height - outer * 2, 28);
+      context.clip();
+      context.fillStyle = '#1c5b45';
+      context.fillRect(outer, outer, width - outer * 2, 18);
+      context.restore();
+
+      const left = outer + inner;
+      let y = 142;
+      context.fillStyle = '#bb7d1c';
+      context.font = `700 25px ${family}`;
+      context.fillText('የመዝሙር ግጥም', left, y);
+      y += 72;
+      context.fillStyle = '#142a22';
+      context.font = `700 62px ${family}`;
+      const titleLines = wrapCanvasLine(context, song.titleAm, contentWidth);
+      titleLines.forEach(line => {
+        context.fillText(line, left, y);
+        y += 78;
+      });
+      context.fillStyle = '#1c5b45';
+      context.font = `500 30px ${family}`;
+      const metaLine = `${song.artistAm}${album ? `  ·  ${album}` : ''}`;
+      wrapCanvasLine(context, metaLine, contentWidth).forEach(line => {
+        context.fillText(line, left, y);
+        y += 42;
+      });
+      y += 20;
+      context.strokeStyle = '#d9ded9';
+      context.lineWidth = 2;
+      context.beginPath();
+      context.moveTo(left, y);
+      context.lineTo(width - outer - inner, y);
+      context.stroke();
+      y += 64;
+      context.fillStyle = '#142a22';
+      context.font = `500 ${lyricSize}px ${family}`;
+      lyricLines.forEach(line => {
+        if (line) context.fillText(line, left, y);
+        y += lineHeight;
+      });
+
+      const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+      if (!blob) throw new Error('Image unavailable');
+      return new File([blob], `${safeFileName(song.titleEn || song.titleAm)}-Lyrics.png`, { type: 'image/png' });
+    }
+
+    function openShareMenu(songId) {
+      const song = songs.find(item => item.id === songId);
+      if (!song) return;
+      shareSongId = song.id;
+      preparedShareFile = null;
+      document.getElementById('shareDialogSong').textContent = `${song.titleAm} · ${song.artistAm}`;
+      document.getElementById('shareImageLabel').textContent = 'Preparing image…';
+      shareImageOption.disabled = true;
+      shareStatus.textContent = song.lyrics.trim() ? 'Preparing the full lyrics image…' : 'This song does not have lyrics yet. You can still copy its link.';
+      if (!shareDialog.open) shareDialog.showModal();
+      if (!song.lyrics.trim()) return;
+      createSongImageFile(song).then(file => {
+        if (shareSongId !== song.id) return;
+        preparedShareFile = file;
+        document.getElementById('shareImageLabel').textContent = 'Share as image';
+        const canShareFile = Boolean(navigator.share) && (!navigator.canShare || navigator.canShare({ files: [file] }));
+        shareImageOption.disabled = !canShareFile;
+        shareStatus.textContent = canShareFile ? '' : 'Native image sharing is not available on this device.';
+      }).catch(() => {
+        if (shareSongId !== song.id) return;
+        document.getElementById('shareImageLabel').textContent = 'Share as image';
+        shareStatus.textContent = 'The lyrics image could not be prepared.';
+      });
+    }
+
+    async function sharePreparedImage() {
+      const song = songs.find(item => item.id === shareSongId);
+      if (!song || !preparedShareFile || !navigator.share) return;
+      try {
+        await navigator.share({
+          files: [preparedShareFile],
+          title: song.titleEn ? `${song.titleAm} (${song.titleEn})` : song.titleAm,
+          text: `${song.artistAm}${song.album && song.album !== '—' ? ` · ${song.album}` : ''}`
+        });
+        shareDialog.close();
+        showToast('Song image shared');
+      } catch (error) {
+        if (error && error.name === 'AbortError') return;
+        shareStatus.textContent = 'Could not open the share sheet. Please try again.';
+      }
+    }
+
+    async function copySongDeepLink() {
+      const song = songs.find(item => item.id === shareSongId);
+      if (!song) return;
+      try {
+        await copyText(`${publicPageUrl}#song=${encodeURIComponent(song.id)}`);
+        shareStatus.textContent = 'Song link copied';
+        showToast('Song link copied');
+      } catch (error) {
+        shareStatus.textContent = 'Could not copy the song link.';
+      }
+    }
+
+    function openSongFromHash() {
+      const params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+      const songId = params.get('song');
+      const song = songs.find(item => item.id === songId);
+      if (!song) return false;
+      searchMode = 'song';
+      searchEl.value = '';
+      selectedId = song.id;
+      const orderedSongs = sortSongsForDisplay(songs);
+      const position = orderedSongs.findIndex(item => item.id === song.id);
+      visibleLimit = Math.max(pageSize, Math.ceil((position + 1) / pageSize) * pageSize);
+      renderList();
+      requestAnimationFrame(() => {
+        const card = document.getElementById(`song-${song.id}`);
+        if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+      return true;
+    }
+
+    async function copySelectedLyrics() {
+      try {
+        await copyText(selectedLyricsText());
+        showFeedback('ተቀድቷል');
+      } catch (error) {
+        showFeedback('መቅዳት አልተቻለም');
+      }
+    }
+
+    async function shareSelectedLyrics() {
+      const song = songs.find(item => item.id === selectedId);
+      if (!song) return;
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: `${song.titleAm} (${song.titleEn})`, text: selectedLyricsText() });
+          showFeedback('ተጋርቷል');
+          return;
+        } catch (error) {
+          if (error.name === 'AbortError') return;
+          // Native sharing is not consistently available in desktop browsers.
+          // Copy the same lyrics so they can still be pasted and shared.
+        }
+      }
+      try {
+        await copyText(selectedLyricsText());
+        showFeedback('ለማጋራት ተቀድቷል');
+      } catch (error) {
+        showFeedback('ማጋራት አልተቻለም');
+      }
+    }
+
+    function xmlEscape(value) {
+      return String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[character]));
+    }
+
+    function lyricPages(song) {
+      if (!song.lyrics.trim()) {
+        return [[song.titleAm, song.artistAm, 'ግጥሙ ገና አልተጨመረም']];
+      }
+      return song.lyrics.trim().split(/\n\s*\n/).flatMap(stanza => {
+        const lines = stanza.split('\n').map(line => line.trim()).filter(Boolean);
+        const pages = [];
+        for (let index = 0; index < lines.length; index += 7) pages.push(lines.slice(index, index + 7));
+        return pages;
+      });
+    }
+
+    const crcTable = (() => {
+      const table = new Uint32Array(256);
+      for (let index = 0; index < 256; index += 1) {
+        let value = index;
+        for (let bit = 0; bit < 8; bit += 1) value = (value & 1) ? (0xedb88320 ^ (value >>> 1)) : (value >>> 1);
+        table[index] = value >>> 0;
+      }
+      return table;
+    })();
+
+    function crc32(bytes) {
+      let crc = 0xffffffff;
+      for (const byte of bytes) crc = crcTable[(crc ^ byte) & 0xff] ^ (crc >>> 8);
+      return (crc ^ 0xffffffff) >>> 0;
+    }
+
+    function concatBytes(parts) {
+      const output = new Uint8Array(parts.reduce((total, part) => total + part.length, 0));
+      let offset = 0;
+      parts.forEach(part => { output.set(part, offset); offset += part.length; });
+      return output;
+    }
+
+    function makeZip(entries, mimeType) {
+      const encoder = new TextEncoder();
+      const localParts = [];
+      const centralParts = [];
+      let offset = 0;
+      entries.forEach(entry => {
+        const name = encoder.encode(entry.name);
+        const data = entry.data instanceof Uint8Array ? entry.data : encoder.encode(entry.data);
+        const crc = crc32(data);
+        const local = new Uint8Array(30 + name.length);
+        const localView = new DataView(local.buffer);
+        localView.setUint32(0, 0x04034b50, true);
+        localView.setUint16(4, 20, true);
+        localView.setUint16(6, 0x0800, true);
+        localView.setUint16(8, 0, true);
+        localView.setUint16(10, 0, true);
+        localView.setUint16(12, 0, true);
+        localView.setUint32(14, crc, true);
+        localView.setUint32(18, data.length, true);
+        localView.setUint32(22, data.length, true);
+        localView.setUint16(26, name.length, true);
+        localView.setUint16(28, 0, true);
+        local.set(name, 30);
+        localParts.push(local, data);
+
+        const central = new Uint8Array(46 + name.length);
+        const centralView = new DataView(central.buffer);
+        centralView.setUint32(0, 0x02014b50, true);
+        centralView.setUint16(4, 20, true);
+        centralView.setUint16(6, 20, true);
+        centralView.setUint16(8, 0x0800, true);
+        centralView.setUint16(10, 0, true);
+        centralView.setUint16(12, 0, true);
+        centralView.setUint16(14, 0, true);
+        centralView.setUint32(16, crc, true);
+        centralView.setUint32(20, data.length, true);
+        centralView.setUint32(24, data.length, true);
+        centralView.setUint16(28, name.length, true);
+        centralView.setUint16(30, 0, true);
+        centralView.setUint16(32, 0, true);
+        centralView.setUint16(34, 0, true);
+        centralView.setUint16(36, 0, true);
+        centralView.setUint32(38, 0, true);
+        centralView.setUint32(42, offset, true);
+        central.set(name, 46);
+        centralParts.push(central);
+        offset += local.length + data.length;
+      });
+      const localBytes = concatBytes(localParts);
+      const centralBytes = concatBytes(centralParts);
+      const end = new Uint8Array(22);
+      const endView = new DataView(end.buffer);
+      endView.setUint32(0, 0x06054b50, true);
+      endView.setUint16(4, 0, true);
+      endView.setUint16(6, 0, true);
+      endView.setUint16(8, entries.length, true);
+      endView.setUint16(10, entries.length, true);
+      endView.setUint32(12, centralBytes.length, true);
+      endView.setUint32(16, localBytes.length, true);
+      endView.setUint16(20, 0, true);
+      return new Blob([localBytes, centralBytes, end], { type: mimeType });
+    }
+
+    function officeCoreProperties(song) {
+      const timestamp = new Date().toISOString();
+      return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title>${xmlEscape(song.titleAm)} (${xmlEscape(song.titleEn)})</dc:title><dc:creator>${xmlEscape(song.artistAm)}</dc:creator><cp:lastModifiedBy>Amharic Songs Master List</cp:lastModifiedBy><dcterms:created xsi:type="dcterms:W3CDTF">${timestamp}</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">${timestamp}</dcterms:modified></cp:coreProperties>`;
+    }
+
+    function makePowerPoint(song) {
+      const pages = lyricPages(song);
+      const slideOverrides = pages.map((_, index) => `<Override PartName="/ppt/slides/slide${index + 1}.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.slide+xml"/>`).join('');
+      const slideIds = pages.map((_, index) => `<p:sldId id="${256 + index}" r:id="rId${index + 2}"/>`).join('');
+      const slideRelationships = pages.map((_, index) => `<Relationship Id="rId${index + 2}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide" Target="slides/slide${index + 1}.xml"/>`).join('');
+      const afterSlides = pages.length + 2;
+      const entries = [
+        { name: '[Content_Types].xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/ppt/presentation.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml"/><Override PartName="/ppt/slideMasters/slideMaster1.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml"/><Override PartName="/ppt/slideLayouts/slideLayout1.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml"/><Override PartName="/ppt/theme/theme1.xml" ContentType="application/vnd.openxmlformats-officedocument.theme+xml"/><Override PartName="/ppt/presProps.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.presProps+xml"/><Override PartName="/ppt/viewProps.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.viewProps+xml"/><Override PartName="/ppt/tableStyles.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.tableStyles+xml"/><Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/><Override PartName="/docProps/app.xml" ContentType="application/vnd.openxmlformats-officedocument.extended-properties+xml"/>${slideOverrides}</Types>` },
+        { name: '_rels/.rels', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="ppt/presentation.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/><Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties" Target="docProps/app.xml"/></Relationships>` },
+        { name: 'docProps/core.xml', data: officeCoreProperties(song) },
+        { name: 'docProps/app.xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties" xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes"><Application>Amharic Songs Master List</Application><PresentationFormat>Widescreen</PresentationFormat><Slides>${pages.length}</Slides><Notes>0</Notes><HiddenSlides>0</HiddenSlides><MMClips>0</MMClips><ScaleCrop>false</ScaleCrop><Company></Company><LinksUpToDate>false</LinksUpToDate><SharedDoc>false</SharedDoc><HyperlinksChanged>false</HyperlinksChanged><AppVersion>16.0000</AppVersion></Properties>` },
+        { name: 'ppt/presentation.xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><p:presentation xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"><p:sldMasterIdLst><p:sldMasterId id="2147483648" r:id="rId1"/></p:sldMasterIdLst><p:sldIdLst>${slideIds}</p:sldIdLst><p:sldSz cx="12192000" cy="6858000" type="screen16x9"/><p:notesSz cx="6858000" cy="9144000"/><p:defaultTextStyle/></p:presentation>` },
+        { name: 'ppt/_rels/presentation.xml.rels', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster" Target="slideMasters/slideMaster1.xml"/>${slideRelationships}<Relationship Id="rId${afterSlides}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps" Target="presProps.xml"/><Relationship Id="rId${afterSlides + 1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps" Target="viewProps.xml"/><Relationship Id="rId${afterSlides + 2}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles" Target="tableStyles.xml"/></Relationships>` },
+        { name: 'ppt/presProps.xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><p:presentationPr xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"/>` },
+        { name: 'ppt/viewProps.xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><p:viewPr xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" lastView="slideView"><p:normalViewPr/><p:slideViewPr><p:cSldViewPr><p:cViewPr varScale="1"><p:scale><a:sx n="1" d="1"/><a:sy n="1" d="1"/></p:scale><p:origin x="0" y="0"/></p:cViewPr><p:guideLst/></p:cSldViewPr></p:slideViewPr><p:notesTextViewPr><p:cViewPr><p:scale><a:sx n="1" d="1"/><a:sy n="1" d="1"/></p:scale><p:origin x="0" y="0"/></p:cViewPr></p:notesTextViewPr><p:gridSpacing cx="72008" cy="72008"/></p:viewPr>` },
+        { name: 'ppt/tableStyles.xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><a:tblStyleLst xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" def="{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}"/>` },
+        { name: 'ppt/theme/theme1.xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><a:theme xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" name="Dark Lyrics"><a:themeElements><a:clrScheme name="Dark Lyrics"><a:dk1><a:srgbClr val="111111"/></a:dk1><a:lt1><a:srgbClr val="FFFFFF"/></a:lt1><a:dk2><a:srgbClr val="111111"/></a:dk2><a:lt2><a:srgbClr val="FFFFFF"/></a:lt2><a:accent1><a:srgbClr val="FFFFFF"/></a:accent1><a:accent2><a:srgbClr val="FFFFFF"/></a:accent2><a:accent3><a:srgbClr val="FFFFFF"/></a:accent3><a:accent4><a:srgbClr val="FFFFFF"/></a:accent4><a:accent5><a:srgbClr val="FFFFFF"/></a:accent5><a:accent6><a:srgbClr val="FFFFFF"/></a:accent6><a:hlink><a:srgbClr val="FFFFFF"/></a:hlink><a:folHlink><a:srgbClr val="DDDDDD"/></a:folHlink></a:clrScheme><a:fontScheme name="Dark Lyrics"><a:majorFont><a:latin typeface="Noto Sans Ethiopic"/><a:ea typeface="Noto Sans Ethiopic"/><a:cs typeface="Noto Sans Ethiopic"/></a:majorFont><a:minorFont><a:latin typeface="Noto Sans Ethiopic"/><a:ea typeface="Noto Sans Ethiopic"/><a:cs typeface="Noto Sans Ethiopic"/></a:minorFont></a:fontScheme><a:fmtScheme name="Dark Lyrics"><a:fillStyleLst><a:solidFill><a:schemeClr val="phClr"/></a:solidFill><a:gradFill rotWithShape="1"><a:gsLst><a:gs pos="0"><a:schemeClr val="phClr"/></a:gs><a:gs pos="100000"><a:schemeClr val="phClr"/></a:gs></a:gsLst><a:lin ang="5400000" scaled="0"/></a:gradFill><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:fillStyleLst><a:lnStyleLst><a:ln w="9525"><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:ln><a:ln w="25400"><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:ln><a:ln w="38100"><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:ln></a:lnStyleLst><a:effectStyleLst><a:effectStyle><a:effectLst/></a:effectStyle><a:effectStyle><a:effectLst/></a:effectStyle><a:effectStyle><a:effectLst/></a:effectStyle></a:effectStyleLst><a:bgFillStyleLst><a:solidFill><a:schemeClr val="phClr"/></a:solidFill><a:solidFill><a:schemeClr val="phClr"/></a:solidFill><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:bgFillStyleLst></a:fmtScheme></a:themeElements></a:theme>` },
+        { name: 'ppt/slideMasters/slideMaster1.xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><p:sldMaster xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"><p:cSld><p:spTree><p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr><p:grpSpPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="0" cy="0"/><a:chOff x="0" y="0"/><a:chExt cx="0" cy="0"/></a:xfrm></p:grpSpPr></p:spTree></p:cSld><p:clrMap accent1="accent1" accent2="accent2" accent3="accent3" accent4="accent4" accent5="accent5" accent6="accent6" bg1="dk1" bg2="dk2" folHlink="folHlink" hlink="hlink" tx1="lt1" tx2="lt2"/><p:sldLayoutIdLst><p:sldLayoutId id="1" r:id="rId1"/></p:sldLayoutIdLst><p:txStyles><p:titleStyle/><p:bodyStyle/><p:otherStyle/></p:txStyles></p:sldMaster>` },
+        { name: 'ppt/slideMasters/_rels/slideMaster1.xml.rels', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout" Target="../slideLayouts/slideLayout1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme" Target="../theme/theme1.xml"/></Relationships>` },
+        { name: 'ppt/slideLayouts/slideLayout1.xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><p:sldLayout xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" type="blank" preserve="1"><p:cSld name="Blank"><p:spTree><p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr><p:grpSpPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="0" cy="0"/><a:chOff x="0" y="0"/><a:chExt cx="0" cy="0"/></a:xfrm></p:grpSpPr></p:spTree></p:cSld><p:clrMapOvr><a:masterClrMapping/></p:clrMapOvr></p:sldLayout>` },
+        { name: 'ppt/slideLayouts/_rels/slideLayout1.xml.rels', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster" Target="../slideMasters/slideMaster1.xml"/></Relationships>` }
+      ];
+      pages.forEach((lines, index) => {
+        const longest = Math.max(...lines.map(line => line.length));
+        const fontSize = longest > 80 ? 2300 : longest > 62 ? 2600 : 3000;
+        const paragraphs = lines.map(line => `<a:p><a:pPr algn="ctr"><a:lnSpc><a:spcPct val="112000"/></a:lnSpc></a:pPr><a:r><a:rPr lang="am-ET" sz="${fontSize}" b="1" dirty="0"><a:solidFill><a:srgbClr val="FFFFFF"/></a:solidFill><a:latin typeface="Noto Sans Ethiopic"/><a:ea typeface="Noto Sans Ethiopic"/><a:cs typeface="Noto Sans Ethiopic"/></a:rPr><a:t>${xmlEscape(line)}</a:t></a:r><a:endParaRPr lang="am-ET" sz="${fontSize}" b="1"/></a:p>`).join('');
+        entries.push(
+          { name: `ppt/slides/slide${index + 1}.xml`, data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"><p:cSld><p:bg><p:bgPr><a:solidFill><a:srgbClr val="111111"/></a:solidFill><a:effectLst/></p:bgPr></p:bg><p:spTree><p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr><p:grpSpPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="0" cy="0"/><a:chOff x="0" y="0"/><a:chExt cx="0" cy="0"/></a:xfrm></p:grpSpPr><p:sp><p:nvSpPr><p:cNvPr id="2" name="Lyrics ${index + 1}"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="685800" y="411480"/><a:ext cx="10820400" cy="6035040"/></a:xfrm><a:noFill/></p:spPr><p:txBody><a:bodyPr wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" anchor="ctr" anchorCtr="1"/><a:lstStyle/>${paragraphs}</p:txBody></p:sp></p:spTree></p:cSld><p:clrMapOvr><a:masterClrMapping/></p:clrMapOvr></p:sld>` },
+          { name: `ppt/slides/_rels/slide${index + 1}.xml.rels`, data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout" Target="../slideLayouts/slideLayout1.xml"/></Relationships>` }
+        );
+      });
+      return makeZip(entries, 'application/vnd.openxmlformats-officedocument.presentationml.presentation');
+    }
+
+    function makeWordDocument(song) {
+      const stanzas = song.lyrics.trim().split(/\n\s*\n/).map(stanza => stanza.split('\n').map(line => line.trim()).filter(Boolean));
+      const title = `<w:p><w:pPr><w:jc w:val="center"/><w:spacing w:after="120"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Nyala" w:hAnsi="Nyala" w:eastAsia="Nyala" w:cs="Nyala"/><w:lang w:val="am-ET"/><w:b/><w:color w:val="000000"/><w:sz w:val="36"/><w:szCs w:val="36"/></w:rPr><w:t>${xmlEscape(song.titleAm)} (${xmlEscape(song.titleEn)})</w:t></w:r></w:p>`;
+      const byline = `<w:p><w:pPr><w:jc w:val="center"/><w:spacing w:after="360"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Nyala" w:hAnsi="Nyala" w:eastAsia="Nyala" w:cs="Nyala"/><w:lang w:val="am-ET"/><w:color w:val="555555"/><w:sz w:val="24"/><w:szCs w:val="24"/></w:rPr><w:t>${xmlEscape(song.artistAm)} · ${xmlEscape(song.album)}</w:t></w:r></w:p>`;
+      const paragraphs = song.lyrics.trim()
+        ? stanzas.map(lines => lines.map((line, lineIndex) => `<w:p><w:pPr><w:jc w:val="left"/><w:spacing w:before="0" w:after="${lineIndex === lines.length - 1 ? 240 : 40}" w:line="360" w:lineRule="auto"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Nyala" w:hAnsi="Nyala" w:eastAsia="Nyala" w:cs="Nyala"/><w:lang w:val="am-ET"/><w:color w:val="000000"/><w:sz w:val="28"/><w:szCs w:val="28"/></w:rPr><w:t xml:space="preserve">${xmlEscape(line)}</w:t></w:r></w:p>`).join('')).join('')
+        : `<w:p><w:pPr><w:jc w:val="center"/><w:spacing w:after="240"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Nyala" w:hAnsi="Nyala" w:eastAsia="Nyala" w:cs="Nyala"/><w:lang w:val="am-ET"/><w:color w:val="555555"/><w:sz w:val="28"/><w:szCs w:val="28"/></w:rPr><w:t>ግጥሙ ገና አልተጨመረም</w:t></w:r></w:p>`;
+      const entries = [
+        { name: '[Content_Types].xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/><Override PartName="/word/settings.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml"/><Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/><Override PartName="/docProps/app.xml" ContentType="application/vnd.openxmlformats-officedocument.extended-properties+xml"/></Types>` },
+        { name: '_rels/.rels', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/><Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties" Target="docProps/app.xml"/></Relationships>` },
+        { name: 'docProps/core.xml', data: officeCoreProperties(song) },
+        { name: 'docProps/app.xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Properties xmlns="http://schemas.openxmlformats.org/officeDocument/2006/extended-properties" xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes"><Application>Amharic Songs Master List</Application><Pages>1</Pages><Words>0</Words><Characters>0</Characters><Company></Company><AppVersion>16.0000</AppVersion></Properties>` },
+        { name: 'word/document.xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:background w:color="FFFFFF"/><w:body>${title}${byline}${paragraphs}<w:sectPr><w:pgSz w:w="12240" w:h="15840"/><w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0"/></w:sectPr></w:body></w:document>` },
+        { name: 'word/_rels/document.xml.rels', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings" Target="settings.xml"/></Relationships>` },
+        { name: 'word/styles.xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Nyala" w:hAnsi="Nyala" w:eastAsia="Nyala" w:cs="Nyala"/><w:lang w:val="am-ET"/><w:color w:val="000000"/><w:sz w:val="28"/><w:szCs w:val="28"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:jc w:val="left"/></w:pPr></w:pPrDefault></w:docDefaults><w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:qFormat/></w:style></w:styles>` },
+        { name: 'word/settings.xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:settings xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:zoom w:percent="100"/><w:displayBackgroundShape/><w:defaultTabStop w:val="720"/></w:settings>` }
+      ];
+      return makeZip(entries, 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+    }
+
+    function safeFileName(value) {
+      return String(value || 'Amharic-Song')
+        .normalize('NFKC')
+        .replace(/[\\/:*?"<>|]+/g, '-')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^[-.]+|[-.]+$/g, '')
+        .slice(0, 90) || 'Amharic-Song';
+    }
+
+    function openPreparingWindow() {
+      const deliveryWindow = window.open('', '_blank');
+      if (!deliveryWindow) return null;
+      deliveryWindow.document.open();
+      deliveryWindow.document.write(`<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Preparing file…</title><style>html{color-scheme:light dark}body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f5f3ee;color:#17201c;font-family:system-ui,-apple-system,sans-serif}.loading{font-weight:800}@media(prefers-color-scheme:dark){body{background:#101512;color:#f4f5f2}}</style></head><body><p class="loading">ፋይሉ እየተዘጋጀ ነው…</p></body></html>`);
+      deliveryWindow.document.close();
+      return deliveryWindow;
+    }
+
+    function renderDeliveryPage(deliveryWindow, song, blob, fileName, isPowerPoint) {
+      const deliveryFile = new deliveryWindow.File([blob], fileName, { type: blob.type });
+      const objectUrl = deliveryWindow.URL.createObjectURL(deliveryFile);
+      const doc = deliveryWindow.document;
+      doc.open();
+      doc.write(`<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Share file</title><style>
+        :root{color-scheme:light dark;--bg:#f5f3ee;--card:#fff;--ink:#17201c;--muted:#59645e;--green:#1c6b4f;--line:#d8ded9;--soft:#edf3ef}
+        *{box-sizing:border-box}body{margin:0;min-height:100vh;padding:24px;display:grid;place-items:center;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+        main{width:min(100%,520px);background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 18px 48px rgba(26,41,34,.12)}
+        .type{margin:0 0 8px;color:var(--green);font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}.song{margin:0;font-size:clamp(26px,7vw,38px);line-height:1.15}.artist{margin:10px 0 28px;color:var(--muted);font-size:17px}
+        button,a{width:100%;min-height:56px;border-radius:12px;padding:15px 18px;font:inherit;font-weight:800;text-align:center;text-decoration:none;cursor:pointer}button{border:1px solid var(--green);background:var(--green);color:#fff}a{display:flex;align-items:center;justify-content:center;margin-top:12px;border:1px solid var(--line);background:var(--soft);color:var(--ink)}button:disabled{opacity:.62;cursor:wait}.status{min-height:24px;margin:18px 0 0;color:var(--muted);font-size:14px;line-height:1.45;text-align:center}
+        @media(prefers-color-scheme:dark){:root{--bg:#101512;--card:#18201c;--ink:#f4f5f2;--muted:#b6c0ba;--green:#71d5aa;--line:#344139;--soft:#222d27}button{color:#0b1813}}
+      </style></head><body><main><p class="type" id="fileType"></p><h1 class="song" id="songTitle"></h1><p class="artist" id="artist"></p><button id="shareFile" type="button">Share with apps</button><a id="saveFile" download>Save to Files</a><p class="status" id="status" role="status" aria-live="polite">Opening your apps…</p></main></body></html>`);
+      doc.close();
+      doc.getElementById('fileType').textContent = isPowerPoint ? 'PowerPoint ready' : 'Word document ready';
+      doc.getElementById('songTitle').textContent = song.titleEn ? `${song.titleAm} (${song.titleEn})` : song.titleAm;
+      doc.getElementById('artist').textContent = song.artistAm;
+      const shareButton = doc.getElementById('shareFile');
+      const saveLink = doc.getElementById('saveFile');
+      const status = doc.getElementById('status');
+      saveLink.href = objectUrl;
+      saveLink.download = fileName;
+
+      async function shareFile(fromButton) {
+        const shareData = {
+          files: [deliveryFile],
+          title: song.titleEn ? `${song.titleAm} (${song.titleEn})` : song.titleAm,
+          text: `${song.artistAm} · ${isPowerPoint ? 'PowerPoint' : 'Word'}`
+        };
+        if (!deliveryWindow.navigator.share || (deliveryWindow.navigator.canShare && !deliveryWindow.navigator.canShare({ files: [deliveryFile] }))) {
+          status.textContent = 'Sharing is not available here. Use Save to Files.';
+          return false;
+        }
+        if (fromButton) {
+          shareButton.disabled = true;
+          shareButton.textContent = 'Opening apps…';
+        }
+        try {
+          await deliveryWindow.navigator.share(shareData);
+          status.textContent = 'File shared.';
+          return true;
+        } catch (error) {
+          status.textContent = error && error.name === 'AbortError'
+            ? 'Sharing canceled. Tap Share with apps to try again.'
+            : 'Could not open the app list. Tap Share with apps or use Save to Files.';
+          return false;
+        } finally {
+          if (fromButton) {
+            shareButton.disabled = false;
+            shareButton.textContent = 'Share with apps';
+          }
+        }
+      }
+
+      shareButton.addEventListener('click', () => { shareFile(true); });
+      deliveryWindow.addEventListener('beforeunload', () => deliveryWindow.URL.revokeObjectURL(objectUrl), { once: true });
+      shareFile(false);
+    }
+
+    async function shareFileInPage(file, song, isPowerPoint) {
+      if (!navigator.share || (navigator.canShare && !navigator.canShare({ files: [file] }))) return false;
+      try {
+        await navigator.share({
+          files: [file],
+          title: song.titleEn ? `${song.titleAm} (${song.titleEn})` : song.titleAm,
+          text: `${song.artistAm} · ${isPowerPoint ? 'PowerPoint' : 'Word'}`
+        });
+        return true;
+      } catch (error) {
+        return false;
+      }
+    }
+
+    function setExportButtonMessage(button, message) {
+      if (!button) return;
+      const original = button.dataset.originalHtml || button.innerHTML;
+      button.dataset.originalHtml = original;
+      button.innerHTML = `${icons.download} ${message}`;
+      window.setTimeout(() => {
+        if (button.isConnected) button.innerHTML = original;
+      }, 2600);
+    }
+
+    async function exportSongFile(songId, kind, button) {
+      const song = songs.find(item => item.id === songId);
+      if (!song) return;
+      const isPowerPoint = kind === 'pptx';
+      const deliveryWindow = openPreparingWindow();
+      button.disabled = true;
+      button.setAttribute('aria-busy', 'true');
+      setExportButtonMessage(button, 'እየተዘጋጀ ነው…');
+      showFeedback('ፋይሉ እየተዘጋጀ ነው…');
+      try {
+        const blob = isPowerPoint ? makePowerPoint(song) : makeWordDocument(song);
+        const baseName = safeFileName(song.titleEn || song.titleAm);
+        const fileName = `${baseName}-Lyrics-${isPowerPoint ? 'PowerPoint.pptx' : 'Word.docx'}`;
+        if (deliveryWindow) {
+          renderDeliveryPage(deliveryWindow, song, blob, fileName, isPowerPoint);
+          setExportButtonMessage(button, 'ተዘጋጅቷል');
+          showFeedback('ፋይሉ ተዘጋጅቷል');
+          return;
+        }
+
+        const file = new File([blob], fileName, { type: blob.type });
+        const shared = await shareFileInPage(file, song, isPowerPoint);
+        if (shared) {
+          setExportButtonMessage(button, 'ተጋርቷል');
+          showFeedback('ፋይሉ ተጋርቷል');
+        } else {
+          setExportButtonMessage(button, 'ማጋራት አልተቻለም');
+          showFeedback('የመተግበሪያ ዝርዝሩን መክፈት አልተቻለም');
+        }
+      } catch (error) {
+        if (deliveryWindow && !deliveryWindow.closed) {
+          deliveryWindow.document.body.innerHTML = '<p style="font:700 18px system-ui;padding:24px">ፋይሉን ማዘጋጀት አልተቻለም።</p>';
+        }
+        setExportButtonMessage(button, 'አልተቻለም');
+        showFeedback('ፋይሉን ማዘጋጀት አልተቻለም');
+      } finally {
+        button.disabled = false;
+        button.removeAttribute('aria-busy');
+      }
+    }
+
+    function setSortMode(mode) {
+      sortMode = mode;
+      visibleLimit = pageSize;
+      inlinePlayingId = null;
+      const isTitle = mode === 'title';
+      sortByTitle.classList.toggle('active', isTitle);
+      sortByTitle.setAttribute('aria-pressed', String(isTitle));
+      sortByAlbum.classList.toggle('active', !isTitle);
+      sortByAlbum.setAttribute('aria-pressed', String(!isTitle));
+      renderList(searchEl.value);
+    }
+
+    function setSearchMode(mode) {
+      searchMode = mode;
+      visibleLimit = pageSize;
+      inlinePlayingId = null;
+      searchEl.value = '';
+      const isSong = mode === 'song';
+      const isArtist = mode === 'artist';
+      const isLyrics = mode === 'lyrics';
+      searchBySong.classList.toggle('active', isSong);
+      searchBySong.setAttribute('aria-pressed', String(isSong));
+      searchByArtist.classList.toggle('active', isArtist);
+      searchByArtist.setAttribute('aria-pressed', String(isArtist));
+      searchByLyrics.classList.toggle('active', isLyrics);
+      searchByLyrics.setAttribute('aria-pressed', String(isLyrics));
+      if (isArtist) {
+        searchEl.placeholder = 'የዘማሪ ስም ይጻፉ…';
+        searchLabel.textContent = 'ዘማሪ በስም ይፈልጉ';
+      } else if (isLyrics) {
+        searchEl.placeholder = 'የሚያስታውሱትን የግጥም መስመር ይጻፉ…';
+        searchLabel.textContent = 'በግጥም መስመር ይፈልጉ';
+      } else {
+        searchEl.placeholder = 'የመዝሙር ርዕስ ይጻፉ…';
+        searchLabel.textContent = 'መዝሙር በርዕስ ይፈልጉ';
+      }
+      renderList();
+      searchEl.focus({ preventScroll: true });
+    }
+
+    searchBySong.addEventListener('click', () => setSearchMode('song'));
+    searchByArtist.addEventListener('click', () => setSearchMode('artist'));
+    searchByLyrics.addEventListener('click', () => setSearchMode('lyrics'));
+    sortByTitle.addEventListener('click', () => setSortMode('title'));
+    sortByAlbum.addEventListener('click', () => setSortMode('album'));
+    searchEl.addEventListener('input', event => {
+      visibleLimit = pageSize;
+      inlinePlayingId = null;
+      renderList(event.target.value);
+    });
+    loadMore.addEventListener('click', () => {
+      visibleLimit += pageSize;
+      renderList(searchEl.value);
+      loadMore.focus({ preventScroll: true });
+    });
+    playInApp.addEventListener('click', () => setActiveVideo(activeVideoIndex, true));
+    document.getElementById('closePlayer').addEventListener('click', () => {
+      stopPlayer();
+      playInApp.focus();
+    });
+    document.getElementById('closePanel').addEventListener('click', closePanel);
+    document.getElementById('copyLyrics').addEventListener('click', copySelectedLyrics);
+    document.getElementById('shareLyrics').addEventListener('click', () => openShareMenu(selectedId));
+    document.getElementById('closeShareDialog').addEventListener('click', () => shareDialog.close());
+    shareDialog.addEventListener('click', event => { if (event.target === shareDialog) shareDialog.close(); });
+    shareImageOption.addEventListener('click', sharePreparedImage);
+    copySongLinkOption.addEventListener('click', copySongDeepLink);
+    document.getElementById('powerpointLink').addEventListener('click', event => exportSongFile(selectedId, 'pptx', event.currentTarget));
+    document.getElementById('wordLink').addEventListener('click', event => exportSongFile(selectedId, 'docx', event.currentTarget));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && !shareDialog.open) closePanel(); });
+    window.matchMedia('(min-width: 1081px)').addEventListener('change', event => { if (event.matches) closePanel(); });
+    window.addEventListener('hashchange', openSongFromHash);
+
+    if (!openSongFromHash()) {
+      renderList();
+      selectSong(songs[0].id);
+    }
+  </script>
+</body>
+</html>
